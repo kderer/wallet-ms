@@ -1,6 +1,6 @@
 package com.leovegas.wallet.core.dto.response;
 
-import com.leovegas.wallet.core.constant.ServiceResultEnum;
+import com.leovegas.wallet.core.enumaration.ServiceResultEnum;
 
 public class UnhandledExceptionResponse extends BaseServiceResponse {
 	

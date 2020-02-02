@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.leovegas.wallet.core.constant.ServiceResultEnum;
 import com.leovegas.wallet.core.dto.WalletTransactionDto;
 import com.leovegas.wallet.core.dto.request.CreditRequest;
 import com.leovegas.wallet.core.dto.request.QueryBalanceRequest;
@@ -21,12 +20,13 @@ import com.leovegas.wallet.core.dto.response.CreditResponse;
 import com.leovegas.wallet.core.dto.response.QueryBalanceResponse;
 import com.leovegas.wallet.core.dto.response.TransactionHistoryResponse;
 import com.leovegas.wallet.core.dto.response.WithdrawResponse;
+import com.leovegas.wallet.core.enumaration.ServiceResultEnum;
+import com.leovegas.wallet.core.exception.DuplicateTransactionIdException;
+import com.leovegas.wallet.core.exception.InvalidAmountException;
+import com.leovegas.wallet.core.exception.InvalidTransactionIdException;
 import com.leovegas.wallet.core.service.WalletService;
 import com.leovegas.wallet.core.test.BaseTest;
 import com.leovegas.wallet.core.util.CurrencyUtil;
-import com.leovegas.wallet.core.util.DuplicateTransactionIdException;
-import com.leovegas.wallet.core.util.InvalidAmountException;
-import com.leovegas.wallet.core.util.InvalidTransactionIdException;
 import com.leovegas.wallet.core.util.ServiceRequestContext;
 
 @TestMethodOrder(OrderAnnotation.class)

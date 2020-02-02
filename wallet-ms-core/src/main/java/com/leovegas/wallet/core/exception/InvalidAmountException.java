@@ -1,4 +1,4 @@
-package com.leovegas.wallet.core.util;
+package com.leovegas.wallet.core.exception;
 
 public class InvalidAmountException extends Exception {
 

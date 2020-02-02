@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.leovegas.wallet.core.constant.ServiceResultEnum;
 import com.leovegas.wallet.core.dto.response.BaseServiceResponse;
 import com.leovegas.wallet.core.dto.response.UnhandledExceptionResponse;
-import com.leovegas.wallet.core.util.DuplicateTransactionIdException;
-import com.leovegas.wallet.core.util.InvalidAmountException;
-import com.leovegas.wallet.core.util.InvalidTransactionIdException;
+import com.leovegas.wallet.core.enumaration.ServiceResultEnum;
+import com.leovegas.wallet.core.exception.DuplicateTransactionIdException;
+import com.leovegas.wallet.core.exception.InvalidAmountException;
+import com.leovegas.wallet.core.exception.InvalidTransactionIdException;
 import com.leovegas.wallet.rest.util.ServiceResponseHandler;
 
 @ControllerAdvice

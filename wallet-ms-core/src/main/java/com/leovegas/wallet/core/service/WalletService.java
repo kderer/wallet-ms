@@ -19,7 +19,6 @@ import org.springframework.data.domain.Sort.Order;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import com.leovegas.wallet.core.constant.ServiceResultEnum;
 import com.leovegas.wallet.core.db.model.Wallet;
 import com.leovegas.wallet.core.db.model.WalletTransaction;
 import com.leovegas.wallet.core.db.repository.WalletRepository;
@@ -33,10 +32,11 @@ import com.leovegas.wallet.core.dto.response.CreditResponse;
 import com.leovegas.wallet.core.dto.response.QueryBalanceResponse;
 import com.leovegas.wallet.core.dto.response.TransactionHistoryResponse;
 import com.leovegas.wallet.core.dto.response.WithdrawResponse;
+import com.leovegas.wallet.core.enumaration.ServiceResultEnum;
+import com.leovegas.wallet.core.exception.DuplicateTransactionIdException;
+import com.leovegas.wallet.core.exception.InvalidAmountException;
+import com.leovegas.wallet.core.exception.InvalidTransactionIdException;
 import com.leovegas.wallet.core.util.CurrencyUtil;
-import com.leovegas.wallet.core.util.DuplicateTransactionIdException;
-import com.leovegas.wallet.core.util.InvalidAmountException;
-import com.leovegas.wallet.core.util.InvalidTransactionIdException;
 import com.leovegas.wallet.core.util.ObjectMapperUtil;
 
 @Service

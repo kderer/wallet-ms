@@ -2,7 +2,7 @@ package com.leovegas.wallet.core.dto.response;
 
 import java.math.BigDecimal;
 
-import com.leovegas.wallet.core.constant.ServiceResultEnum;
+import com.leovegas.wallet.core.enumaration.ServiceResultEnum;
 import com.leovegas.wallet.core.util.CurrencyUtil;
 
 public class QueryBalanceResponse extends BaseServiceResponse {

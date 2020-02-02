@@ -18,10 +18,10 @@ import com.leovegas.wallet.core.dto.response.CreditResponse;
 import com.leovegas.wallet.core.dto.response.QueryBalanceResponse;
 import com.leovegas.wallet.core.dto.response.TransactionHistoryResponse;
 import com.leovegas.wallet.core.dto.response.WithdrawResponse;
+import com.leovegas.wallet.core.exception.DuplicateTransactionIdException;
+import com.leovegas.wallet.core.exception.InvalidAmountException;
+import com.leovegas.wallet.core.exception.InvalidTransactionIdException;
 import com.leovegas.wallet.core.service.WalletService;
-import com.leovegas.wallet.core.util.DuplicateTransactionIdException;
-import com.leovegas.wallet.core.util.InvalidAmountException;
-import com.leovegas.wallet.core.util.InvalidTransactionIdException;
 import com.leovegas.wallet.core.util.ObjectMapperUtil;
 import com.leovegas.wallet.rest.util.ServiceResponseHandler;
 
@@ -31,7 +31,7 @@ import io.swagger.annotations.ApiParam;
 
 @RestController
 @RequestMapping("/wallet")
-@Api(tags = "Wallet Operation APIs")
+@Api(tags = "Wallet Management APIs")
 public class WalletController {
 	private static final Logger logger = LoggerFactory.getLogger(WalletController.class);
 

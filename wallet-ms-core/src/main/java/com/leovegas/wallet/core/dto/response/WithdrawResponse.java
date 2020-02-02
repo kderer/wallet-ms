@@ -1,8 +1,8 @@
 package com.leovegas.wallet.core.dto.response;
 
-import com.leovegas.wallet.core.constant.ServiceResultEnum;
 import com.leovegas.wallet.core.dto.WalletTransactionDto;
 import com.leovegas.wallet.core.dto.request.WithdrawRequest;
+import com.leovegas.wallet.core.enumaration.ServiceResultEnum;
 
 public class WithdrawResponse extends BaseServiceResponse {
 	private WalletTransactionDto transaction;

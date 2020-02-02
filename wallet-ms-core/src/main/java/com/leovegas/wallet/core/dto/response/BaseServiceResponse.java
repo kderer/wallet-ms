@@ -2,7 +2,7 @@ package com.leovegas.wallet.core.dto.response;
 
 import org.springframework.util.StringUtils;
 
-import com.leovegas.wallet.core.constant.ServiceResultEnum;
+import com.leovegas.wallet.core.enumaration.ServiceResultEnum;
 import com.leovegas.wallet.core.util.ServiceRequestContext;
 
 public abstract class BaseServiceResponse {

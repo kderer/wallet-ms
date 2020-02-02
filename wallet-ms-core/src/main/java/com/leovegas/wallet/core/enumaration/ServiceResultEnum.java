@@ -1,4 +1,4 @@
-package com.leovegas.wallet.core.constant;
+package com.leovegas.wallet.core.enumaration;
 
 public enum ServiceResultEnum {	
 	SUCCESS("000000", "message.service.result.success"),

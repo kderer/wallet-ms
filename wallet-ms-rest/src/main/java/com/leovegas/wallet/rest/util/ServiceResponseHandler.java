@@ -3,8 +3,8 @@ package com.leovegas.wallet.rest.util;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.leovegas.wallet.core.constant.ServiceResultEnum;
 import com.leovegas.wallet.core.dto.response.BaseServiceResponse;
+import com.leovegas.wallet.core.enumaration.ServiceResultEnum;
 
 public abstract class ServiceResponseHandler {
 	
