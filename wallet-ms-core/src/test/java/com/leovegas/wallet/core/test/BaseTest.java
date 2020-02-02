@@ -19,7 +19,7 @@ public abstract class BaseTest {
 	@PostConstruct
 	public void init() {
 		ServiceRequestContext context = ServiceRequestContext.getCurrentInstance();
-		context.setUserId("kadir");
+		context.setUserId("sr_context_default_user");
 		context.setLocale("en");
 		context.setServiceI18nBundle(serviceI18nBundle);
 	}

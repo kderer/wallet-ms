@@ -16,6 +16,7 @@ import com.leovegas.wallet.core.test.BaseTest;
 import com.leovegas.wallet.core.util.CurrencyUtil;
 
 public class WalletRepositoryTest extends BaseTest {
+	private static final String WALLET_REPO_TEST_USER_ID = "wallet_repo_test_user";
 
 	@Autowired
 	private WalletRepository walletRepository;
@@ -29,7 +30,7 @@ public class WalletRepositoryTest extends BaseTest {
 		BigDecimal addAmount = CurrencyUtil.createBigDecimal(28.56D);
 
 		Wallet wallet = new Wallet();
-		wallet.setUserId("test");
+		wallet.setUserId(WALLET_REPO_TEST_USER_ID);
 		wallet.setBalance(initialBalance);
 
 		walletRepository.save(wallet);
@@ -37,11 +38,11 @@ public class WalletRepositoryTest extends BaseTest {
 		txTemplate.execute(new TransactionCallbackWithoutResult() {
 			@Override
 			protected void doInTransactionWithoutResult(TransactionStatus status) {
-				walletRepository.addBalance("test", addAmount);
+				walletRepository.addBalance(WALLET_REPO_TEST_USER_ID, addAmount);
 			}
 		});
 
-		wallet = walletRepository.findByUserId("test");
+		wallet = walletRepository.findByUserId(WALLET_REPO_TEST_USER_ID);
 
 		assertEquals(CurrencyUtil.setScale(initialBalance.add(addAmount)), CurrencyUtil.setScale(wallet.getBalance()));
 	}
@@ -53,7 +54,7 @@ public class WalletRepositoryTest extends BaseTest {
 		BigDecimal effectiveAmount = CurrencyUtil.setScale(addAmount.multiply(CurrencyUtil.createBigDecimal(-1D)));
 
 		Wallet wallet = new Wallet();
-		wallet.setUserId("test");
+		wallet.setUserId(WALLET_REPO_TEST_USER_ID);
 		wallet.setBalance(initialBalance);
 
 		walletRepository.save(wallet);
@@ -61,11 +62,11 @@ public class WalletRepositoryTest extends BaseTest {
 		txTemplate.execute(new TransactionCallbackWithoutResult() {
 			@Override
 			protected void doInTransactionWithoutResult(TransactionStatus status) {
-				walletRepository.addBalance("test", effectiveAmount);
+				walletRepository.addBalance(WALLET_REPO_TEST_USER_ID, effectiveAmount);
 			}
 		});
 
-		wallet = walletRepository.findByUserId("test");
+		wallet = walletRepository.findByUserId(WALLET_REPO_TEST_USER_ID);
 
 		assertEquals(CurrencyUtil.setScale(initialBalance.subtract(addAmount)),
 				CurrencyUtil.setScale(wallet.getBalance()));

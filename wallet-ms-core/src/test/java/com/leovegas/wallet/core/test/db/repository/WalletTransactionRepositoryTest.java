@@ -25,6 +25,7 @@ import com.leovegas.wallet.core.test.BaseTest;
 import com.leovegas.wallet.core.util.CurrencyUtil;
 
 public class WalletTransactionRepositoryTest extends BaseTest {
+	private static final String WALLET_TX_REPO_TEST_USER_ID = "wallet_tx_repo_test_user";
 
 	@Autowired
 	private WalletTransactionRepository walletTransactionRepository;
@@ -36,7 +37,7 @@ public class WalletTransactionRepositoryTest extends BaseTest {
 		transaction.setBalanceAfter(new BigDecimal(85.73));
 		transaction.setCreateTime(Calendar.getInstance().getTimeInMillis());
 		transaction.setExternalId("test1_" + Calendar.getInstance().getTimeInMillis());
-		transaction.setUserId("kadir");
+		transaction.setUserId(WALLET_TX_REPO_TEST_USER_ID);
 
 		walletTransactionRepository.save(transaction);
 
@@ -52,7 +53,7 @@ public class WalletTransactionRepositoryTest extends BaseTest {
 		transaction.setBalanceAfter(new BigDecimal(85.73));
 		transaction.setCreateTime(Calendar.getInstance().getTimeInMillis());
 		transaction.setExternalId(extenalId);
-		transaction.setUserId("kadir");
+		transaction.setUserId(WALLET_TX_REPO_TEST_USER_ID);
 
 		walletTransactionRepository.save(transaction);
 
@@ -68,8 +69,8 @@ public class WalletTransactionRepositoryTest extends BaseTest {
 			transaction.setAmount(CurrencyUtil.createBigDecimal(85.73));
 			transaction.setBalanceAfter(new BigDecimal(85.73));
 			transaction.setCreateTime(Calendar.getInstance().getTimeInMillis());
-			transaction.setExternalId("paging_test_" + i + "_" + Calendar.getInstance().getTimeInMillis());
-			transaction.setUserId("kadir_paging");
+			transaction.setExternalId("wtx_paging_test_" + i + "_" + Calendar.getInstance().getTimeInMillis());
+			transaction.setUserId(WALLET_TX_REPO_TEST_USER_ID + "_paging");
 
 			walletTransactionRepository.save(transaction);
 		}
@@ -77,7 +78,7 @@ public class WalletTransactionRepositoryTest extends BaseTest {
 		Sort sort = Sort.by(Arrays.asList(new Order(Direction.DESC, "createTime")));
 		Pageable pageRequest = PageRequest.of(0, 4, sort);
 
-		Page<WalletTransaction> resultPage = walletTransactionRepository.findByUserIdPaged("kadir_paging", 0L,
+		Page<WalletTransaction> resultPage = walletTransactionRepository.findByUserIdPaged(WALLET_TX_REPO_TEST_USER_ID + "_paging", 0L,
 				Calendar.getInstance().getTimeInMillis(), pageRequest);
 
 		resultPage.stream().forEach(transaction -> System.out.println(transaction.getCreateTime()));
@@ -93,15 +94,15 @@ public class WalletTransactionRepositoryTest extends BaseTest {
 			transaction.setAmount(CurrencyUtil.createBigDecimal(85.73));
 			transaction.setBalanceAfter(new BigDecimal(85.73));
 			transaction.setCreateTime(Calendar.getInstance().getTimeInMillis());
-			transaction.setExternalId("history_test_" + i + "_" + Calendar.getInstance().getTimeInMillis());
-			transaction.setUserId("kadir_history");
+			transaction.setExternalId("wtx_history_test_" + i + "_" + Calendar.getInstance().getTimeInMillis());
+			transaction.setUserId(WALLET_TX_REPO_TEST_USER_ID + "_history");
 
 			walletTransactionRepository.save(transaction);
 		}
 
 		Sort sort = Sort.by(Arrays.asList(new Order(Direction.ASC, "createTime")));
 
-		List<WalletTransaction> resultList = walletTransactionRepository.findByUserId("kadir_history", 0L,
+		List<WalletTransaction> resultList = walletTransactionRepository.findByUserId(WALLET_TX_REPO_TEST_USER_ID + "_history", 0L,
 				Calendar.getInstance().getTimeInMillis(), sort);
 
 		resultList.stream().forEach(transaction -> System.out.println(transaction.getCreateTime()));
