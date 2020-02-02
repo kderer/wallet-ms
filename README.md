@@ -30,7 +30,7 @@ A spring boot web application which basically handles REST API request utilizing
 ### Database
 The application uses H2 integrated database in file mode.<br>
 So, there is no need of installing or connecting to 3rd party database systems.<br>
-Since H2 is used in file mode data will be persisted across restarts.<br>
+Since H2 is used in file mode, data will be persisted across restarts.<br>
 ## Test and Documentation
 After the application successfully started, go to [http://localhost:8888/swagger-ui.html#/Wallet_Operation_APIs](http://localhost:8888/swagger-ui.html#/Wallet_Operation_APIs) on a browser.<br>
 Detailed information about API parameters and response types can be seen here and APIs can be tested as well.<br><br>
