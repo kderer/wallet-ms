@@ -2,7 +2,7 @@
 A simple wallet microservice running on the JVM that manages credit/debit transactions on behalf of players.
 ## Overview
 Wallet micro service is assumed to be run behind a system like API Gateway which handles user requests at first and obtains user information from another authentication micro service and passes parameters like user ID , locale etc. to the wallet micro service.
-(https://github.com/kderer/wallet-ms/blob/master/overview.png?raw=true)
+![](https://github.com/kderer/wallet-ms/blob/master/overview.png?raw=true)
  
 Repository is consist of two projects.
 1. **wallet-ms-core**<br>
@@ -24,15 +24,18 @@ A spring boot web application which basically handles REST API request utilizing
 
 ## Run
 
-**`wallet-ms-rest-1.0.0.jar`** can be copied to another folder for having a clean run folder.
-**8888** port mustn't be used by another process.
-In the command terminal, go to the  folder where  **`wallet-ms-rest-1.0.0.jar`** resides.
-Exceute **`java -jar wallet-ms-rest-1.0.0.jar`** command.
-This will create **data** and **log** folder in the same folder.
+**`wallet-ms-rest-1.0.0.jar`** can be copied to another folder for having a clean run folder.<br>
+**8888** port mustn't be used by another process.<br>
+1. In the command terminal, go to the  folder where  **`wallet-ms-rest-1.0.0.jar`** resides.<br>
+2. Exceute **`java -jar wallet-ms-rest-1.0.0.jar`** command.
+3. This will create **data** and **log** folders in the same folder.
 ### Database
-The application uses H2 integrated database in file mode.
-So, there is no need of installing or connecting to 3rd party database systems.
-Since H2 is used in file mode data will be persisted across restarts.
+The application uses H2 integrated database in file mode.<br>
+So, there is no need of installing or connecting to 3rd party database systems.<br>
+Since H2 is used in file mode data will be persisted across restarts.<br>
 ## Test and Documentation
 After the application successfully started go to [http://localhost:8888/swagger-ui.html#/Wallet_Operation_APIs](http://localhost:8888/swagger-ui.html#/Wallet_Operation_APIs) on a browser.
-Detailed information about APIs can be seen here and APIs can be tested.
+Detailed information about API parameters and response types can be seen here and APIs can be tested as well.
+![](https://github.com/kderer/wallet-ms/blob/master/swagger.png?raw=true)
+
+
