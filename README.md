@@ -6,7 +6,7 @@ Wallet micro service is assumed to be run behind a system like API Gateway which
  
 Repository consists of two projects:
 1. **wallet-ms-core**<br>
-This is the core service library where database interactions and business logic are implemented.
+This is the core service library where database interactions and business logic are implemented.<br>
 Having a separated library project will provide code re-usability and easier maintenance.
 2. **wallet-ms-rest**<br>
 A spring boot web application which basically handles REST API request utilizing the core service library.
@@ -22,7 +22,6 @@ A spring boot web application which basically handles REST API request utilizing
  4. This will run the unit/integration tests, and generate **`wallet-ms-rest-1.0.0.jar`** file under **`wallet-ms-rest/target`** folder.
 
 ## Run
-
 - **`wallet-ms-rest-1.0.0.jar`** can be copied to another folder for having a clean run folder.<br>
 - **8888** port mustn't be used by another process.<br>
 1. In the command terminal, go to the  folder where  **`wallet-ms-rest-1.0.0.jar`** resides.<br>
