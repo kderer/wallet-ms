@@ -1,7 +1,7 @@
 # wallet-ms
 A simple wallet microservice running on the JVM that manages credit/debit transactions on behalf of players.
 ## Overview
-Wallet micro service is assumed to be run behind a system like API Gateway which handles user requests at first and obtains user information from another authentication micro service and passes parameters like user ID , locale etc. to the wallet micro service.
+Wallet micro service is assumed to be run behind a system like API Gateway which handles user requests at first and obtains user information from another authentication micro service and passes parameters like user ID , locale etc. to the wallet micro service.<br>
 ![](https://github.com/kderer/wallet-ms/blob/master/overview.png?raw=true)
  
 Repository is consist of two projects.
@@ -34,8 +34,8 @@ The application uses H2 integrated database in file mode.<br>
 So, there is no need of installing or connecting to 3rd party database systems.<br>
 Since H2 is used in file mode data will be persisted across restarts.<br>
 ## Test and Documentation
-After the application successfully started go to [http://localhost:8888/swagger-ui.html#/Wallet_Operation_APIs](http://localhost:8888/swagger-ui.html#/Wallet_Operation_APIs) on a browser.
-Detailed information about API parameters and response types can be seen here and APIs can be tested as well.
+After the application successfully started go to [http://localhost:8888/swagger-ui.html#/Wallet_Operation_APIs](http://localhost:8888/swagger-ui.html#/Wallet_Operation_APIs) on a browser.<br>
+Detailed information about API parameters and response types can be seen here and APIs can be tested as well.<br>
 ![](https://github.com/kderer/wallet-ms/blob/master/swagger.png?raw=true)
 
 
