@@ -36,5 +36,6 @@ Since H2 is used in file mode data will be persisted across restarts.<br>
 After the application successfully started, go to [http://localhost:8888/swagger-ui.html#/Wallet_Operation_APIs](http://localhost:8888/swagger-ui.html#/Wallet_Operation_APIs) on a browser.<br>
 Detailed information about API parameters and response types can be seen here and APIs can be tested as well.<br><br>
 ![](https://github.com/kderer/wallet-ms/blob/master/swagger.png?raw=true)
-
-
+### Internationalization
+**`sr_locale`** header parameter can be set for testing i18n.<br>
+Currently, only English(**en**) and Sweedish(**sv**) are supported.
