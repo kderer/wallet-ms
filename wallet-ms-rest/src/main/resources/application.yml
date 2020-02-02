@@ -1,0 +1,24 @@
+server:
+   port: 8888
+
+spring:
+   datasource:
+      url: jdbc:h2:file:./data/wallet-ms
+      driverClassName: org.h2.Driver
+      username: sa
+      password: password
+   jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      hibernate.ddl-auto: update
+      show-sql: false
+      properties:
+         hibernate:
+            check_nullability: true
+
+logging:
+   level:
+      com.leovegas.wallet: INFO
+   pattern:
+      console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+      file: "%d %p %c{1.} [%t] %m%n"
+   file: log/wallet-ms.log
