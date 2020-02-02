@@ -9,7 +9,7 @@ Repository consists of two projects:
 This is the core service library where database interactions and business logic are implemented.<br>
 Having a separated library project will provide code re-usability and easier maintenance.
 2. **wallet-ms-rest**<br>
-A spring boot web application which basically handles REST API request utilizing the core service library.
+A spring boot web application which basically handles REST API requests utilizing the core service library.
 
 ## Requirements
  - Java SE Development Kit 8
