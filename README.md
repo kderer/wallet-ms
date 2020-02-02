@@ -5,10 +5,10 @@ Wallet micro service is assumed to be run behind a system like API Gateway which
 (https://github.com/kderer/wallet-ms/blob/master/overview.png?raw=true)
  
 Repository is consist of two projects.
-1. **wallet-ms-core**
+1. **wallet-ms-core**<br>
 This is the core service library where database interactions and business logic are implemented.
 Having a separated library project will provide code re-usability and easier maintenance.
-2. **wallet-ms-rest**
+2. **wallet-ms-rest**<br>
 A spring boot web application which basically handles REST API request utilizing the core service library.
 
 
