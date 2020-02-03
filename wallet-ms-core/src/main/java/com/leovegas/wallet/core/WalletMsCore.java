@@ -15,6 +15,6 @@ public class WalletMsCore {
 		i18nResource.setBasenames("i18n.messages");
 
 		return i18nResource;
-	}	
+	}
 
 }
