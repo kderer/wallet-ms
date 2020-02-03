@@ -1,6 +1,6 @@
 logging:
    level:
-      com.leovegas.wallet: ERROR
+      com.leovegas.wallet: DEBUG
    pattern:
       console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
    file: 
