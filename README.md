@@ -25,6 +25,7 @@ A spring boot web application which basically handles REST API requests utilizin
 - **`wallet-ms-rest-1.0.0.jar`** can be copied to another folder for having a clean run folder.<br>
 - **8888** port mustn't be used by another process.<br>
 1. In the command terminal, go to the  folder where  **`wallet-ms-rest-1.0.0.jar`** resides.<br>
+If the jar file is copied to another folder, go to that folder.
 2. Exceute **`java -jar wallet-ms-rest-1.0.0.jar`** command.
 3. This will create **data** and **log** folders in the same folder.
 ### Database
