@@ -7,9 +7,9 @@ import org.springframework.test.context.ActiveProfiles;
 import com.leovegas.wallet.core.util.ServiceRequestContext;
 import com.leovegas.wallet.rest.test.config.TestConfig;
 
-@ActiveProfiles("test")
 @WebMvcTest
 @ComponentScan(basePackageClasses = TestConfig.class)
+@ActiveProfiles(value ="test")
 public abstract class BaseTest {
 	protected static final String SR_HEADER_USERID = "sr_userId";
 	protected static final String SR_HEADER_LOCALE = "sr_locale";	
