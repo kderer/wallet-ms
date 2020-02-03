@@ -19,7 +19,7 @@ A spring boot web application which basically handles REST API requests utilizin
  1. Open a command terminal.
  2. Go to repository root folder.
  3. Execute **`mvn package`** command.
- 4. This will run the unit/integration tests, and generate **`wallet-ms-rest-1.0.0.jar`** file under **`wallet-ms-rest/target`** folder.
+ 4. This will run unit/integration tests, and generate **`wallet-ms-rest-1.0.0.jar`** file under **`wallet-ms-rest/target`** folder.
 
 ## Run
 - **`wallet-ms-rest-1.0.0.jar`** can be copied to another folder for having a clean run folder.<br>
